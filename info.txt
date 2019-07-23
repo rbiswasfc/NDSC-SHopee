@@ -1,0 +1,20 @@
+# Image files should be organized like this
+
+NDSC_project    
+|-- Train
+|   |-- Beauty
+|   |   |-- 0
+|   |   |-- 1 
+|   |   |-- ...
+|   |-- Fashion
+|   |   |-- 17
+|   |   |-- 18 
+|   |   |-- ...
+|   |-- Mobile
+|   |   |-- 31
+|   |   |-- 32
+|   |   |-- ...
+|-- Test
+|   |-- Beauty
+|   |-- Fashion
+|   |-- Mobile
