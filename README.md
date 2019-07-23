@@ -32,8 +32,7 @@ We first noted the following aspects of the dataset.
 
 For the current competition, we have adopted an ensembling (stacking) approach, where a gradient boosting (XGBoost) technique is used to combine information from multiple predictive models at the base level (level 0). The model architecture is illustrated in Fig 2. In general, the stacked model outperforms each of the individual models due to the inherent smoothing nature and ability to incorporate  strengths of the base models, while removing their biases. It is thus necessary to have significantly different base predictors for extracting diverse information from the dataset. To this end, we have built three models, each characterizing different aspects of the training set.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/NDSC/Algorithm.PNG" alt="Algo">
-<sub>*Fig 2: Model Architecture for Product Category Classification.* </sub>
+![*Fig 2: Model Architecture for Product Category Classification.*](https://github.com/rbiswasfc/NDSC-Shopee/blob/master/images/NDSC/Algorithm.PNG)
 
 ### Image Data
 
@@ -69,17 +68,16 @@ A proper validation strategy is of utmost importance to reconcile the bias-varia
 * Train the XGBoost model and measure its performance on holdout set, 
 * Make the final prediction using XGBoost model.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/NDSC/Valid0.PNG" alt="Valid">
-<sub>*Fig 3: The validation strategy for product classification: Base Layer.* </sub>
+![*Fig 3: The validation strategy for product classification: Base Layer.*](https://github.com/rbiswasfc/NDSC-Shopee/blob/master/images/NDSC/Valid0.PNG)
+![*Fig 4: The validation strategy for product classification: Ensemble Layer.*](https://github.com/rbiswasfc/NDSC-Shopee/blob/master/images/NDSC/Valid1.PNG)
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/NDSC/Valid1.PNG" alt="Valid1">
-<sub>*Fig 4: The validation strategy for product classification: Ensemble Layer.* </sub>
 
 ## Discussion
 
 The performance obtained from different models for different top categories are summarized  in Table 1. As observed, title descriptions are stronger predictor of product categories than image data. Notably, the mobile model performs better as the underlying classes have their own unique identifiers. A significant performance gain is achieved in fashion category via XGBoost.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/NDSC/Table1.PNG" alt="table">
+
+![](https://github.com/rbiswasfc/NDSC-Shopee/blob/master/images/NDSC/Table1.PNG)
 
 ## Outlook
 We have identified a few approaches to improve the model performance. For example, it is noted that in the beauty set, the distribution of categories is vastly different in training and test data. Test set contains significantly large number of items from categories 12-16. The oversampling or differential weighing of errors technique could have been implemented. We have developed an automatic image captioning framework (based on train + test data) to provide additional model features. However, due to limited time, we were unable to integrate it in the final model. This approach has potential to capture the interactions between image and title data. Finally, tuning of model hyperparameters can give a significant boost. 
