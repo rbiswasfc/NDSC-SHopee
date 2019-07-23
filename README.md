@@ -10,9 +10,9 @@ tags:
 
 To build a predictive model for extracting the category of  e-commerce products automatically given their images and titles, as illustrated in the figure below.
 
+![*Fig 1: Problem definition: Product category classification.*](https://github.com/rbiswasfc/NDSC-Shopee/blob/master/images/NDSC/ndsc_data.PNG)
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/NDSC/ndsc_data.PNG" alt="Problem definition">
-<sub>*Fig 1: Problem definition: Product category classification.* </sub>
+
 
 ## Exploratory Data Analysis (EDA)
 
